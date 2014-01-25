@@ -1,0 +1,127 @@
+
+svg {
+	border-style:solid;
+	border-width:2px;
+}
+
+text {
+	font-family: sans-serif;
+	font-size: 14px;
+	color: #aaa;
+}
+
+#legendTitle {
+	font-size: 22px;
+}
+
+.backToUsaButtonText {
+	font-size: 18px;
+}
+
+.switchButtonText {
+	font-size: 14px;
+}
+
+.legendText {
+	font-size: 12px;
+}
+
+.pleaseWaitButtonText {
+	font-size: 26px;
+}
+
+.country_name_label {
+	font-size: 30px;
+}			
+
+.state_name_label {
+	font-size: 40px;
+}
+
+.county_name_label {
+	font-size: 22px;
+}
+
+.demoNameText {
+	font-size: 24px;
+}
+
+.demoValueText {
+	font-size: 26px;
+}
+
+
+
+.theShapeG :hover {
+	fill: yellow !important;
+}
+			
+.theShapeG {
+	stroke: #000;
+	stroke-width: 0.5;
+	fill: rgb(175,175,175);
+}
+
+.theShapeG_counties :hover {
+	fill: yellow !important;
+}
+
+.theShapeG_counties {
+/*	stroke: #fff;
+	stroke-width: 0.25;
+*/	fill: rgb(175,175,175);
+}
+
+.stateMesh {
+	fill: none;
+	stroke: #000;
+	stroke-width: 0.5;
+	stroke-linejoin: round;
+}
+
+
+/* the normal green scale for scaletype 1 - raw numbers */
+.q0-9_1 { fill:rgb(237,248,233); }
+.q1-9_1 { fill:rgb(210,238,205); }
+.q2-9_1 { fill:rgb(186,228,179); }
+.q3-9_1 { fill:rgb(141,210,148); }
+.q4-9_1 { fill:rgb(116,196,118); }
+.q5-9_1 { fill:rgb(80,178,100); }
+.q6-9_1 { fill:rgb(49,163,84); }
+.q7-9_1 { fill:rgb(25,135,64); }
+.q8-9_1 { fill:rgb(0,109,44); }
+
+
+/* the normal blue scale for scaletype 2 - percentages */
+.q0-9_2 { fill:rgb(247,251,255); }
+.q1-9_2 { fill:rgb(222,235,247); }
+.q2-9_2 { fill:rgb(198,219,239); }
+.q3-9_2 { fill:rgb(158,202,225); }
+.q4-9_2 { fill:rgb(107,174,214); }
+.q5-9_2 { fill:rgb(66,146,198); }
+.q6-9_2 { fill:rgb(33,113,181); }
+.q7-9_2 { fill:rgb(8,81,156); }
+.q8-9_2 { fill:rgb(8,48,107); }
+
+
+/* the blue to red scale for scaletype 3 - comparisons */
+.q0-9_3 { fill:rgb(255,0,0); }
+.q1-9_3 { fill:rgb(255,102,102); }
+.q2-9_3 { fill:rgb(255,153,153); }
+.q3-9_3 { fill:rgb(255,220,220); }
+.q4-9_3 { fill:rgb(255,251,255); }
+.q5-9_3 { fill:rgb(198,219,239); }
+.q6-9_3 { fill:rgb(107,174,214); }
+.q7-9_3 { fill:rgb(33,113,181); }
+.q8-9_3 { fill:rgb(8,48,107); }
+
+/* the normal green scale for scaletype 4 - whole numbers */
+.q0-9_4 { fill:rgb(237,248,233); }
+.q1-9_4 { fill:rgb(210,238,205); }
+.q2-9_4 { fill:rgb(186,228,179); }
+.q3-9_4 { fill:rgb(141,210,148); }
+.q4-9_4 { fill:rgb(116,196,118); }
+.q5-9_4 { fill:rgb(80,178,100); }
+.q6-9_4 { fill:rgb(49,163,84); }
+.q7-9_4 { fill:rgb(25,135,64); }
+.q8-9_4 { fill:rgb(0,109,44); }
