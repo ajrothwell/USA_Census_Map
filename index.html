@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>USA Census in D3</title>
+		
+		<link rel='stylesheet' href='css/autocomplete_797.css' />
+		<link rel='stylesheet' href='css/style.css' />
+
+		<script src='js/lib/jquery-1.9.1.min.js'></script>
+		<script src='js/lib/jquery-ui.min.js'></script>
+		<script src='js/lib/d3.v3.min.js'></script>
+		<script src='js/lib/d3.geo.projection.v0.min.js'></script>
+		<script src='js/lib/topojson.v1.min.js'></script>
+		<script src="js/lib/underscore.js"></script>
+		<script src="js/lib/backbone.js"></script>
+		<script src="js/lib/backbone.localStorage.js"></script>
+
+		<script src='js/scripts/variables.js'></script>
+		<script src='js/scripts/centerStateView.js'></script>
+		<script src='js/scripts/initCountryMap.js'></script>
+		<script src='js/scripts/completeCountryMap.js'></script>
+		<script src='js/scripts/completeCountryCountyMap.js'></script>
+		<script src='js/scripts/initStateMap.js'></script>
+		<script src='js/scripts/completeStateMap.js'></script>
+		<script src='js/scripts/autocomplete_797.js'></script>
+		<script src='js/scripts/drawLegend.js'></script>
+		<script src='js/scripts/fromIndex.js'></script>
+		<script src='js/scripts/readIn.js'></script>
+
+	</head>
+	<body>
+
+		<form id='insertForm' method='post'>
+			<input type='text' id='stateInput' name='stateInput' placeholder='Type any State Name'></input>
+			<select id='demoInput' name = 'demoInput'>
+				<option value='0'>Select a Demographic</option>
+				<option value='DP0010001'>Population</option>
+				<option value='DP0240001'>Male/Female Population</option>
+				<option value='DP0020001'>Median Age</option>
+				<option value='DP0020004'>Female-Male Median Age</option>
+				<option value='DP0210004'>Home Ownership %</option>
+				<option value='DP0210005'>Home Rental %</option>
+				<option value='DP0080025'>White Population %</option>
+				<option value='DP0080026'>Black Population %</option>
+				<option value='DP0080027'>Asian Population %</option>
+				<option value='DP0080028'>Native American Population %</option>
+			</select>
+			<button id='submit'>Submit</button>
+		</form>
+		<br/>
+		<svg id='thesvg'></svg>
+
+		<script type="text/javascript">
+			var w = 900, h = 400;
+			var svg = d3.select('svg');
+			svg.attr('width', w)
+				.attr('height', h);
+
+/*
+			var stateNum;
+			var stateNameMasterData;
+			var stateNumberByName = d3.map();
+			
+			var extension = 200;
+			var projection, path;
+
+			var thisImperfectStateName
+
+			var quantile = d3.scale.quantile()
+			var theQuantiles, copiedQuantiles=[];
+
+
+			var formData, formData2, dblclickedStateData			
+			var demographicsArray = []
+			var chosenFeature
+			var lons = []
+			var lats = []
+			var centerLon, centerLat, theCenter
+			var stateWidth, stateHeight, stateDim, statePercent
+			var pi = Math.PI
+			var theScale, theReScale
+			var stateName
+			var stateNumber
+			var stateNumber_saved = 00
+			var theDemographic
+			var theDemographic_saved
+			var demoMin, demoMax
+//			var demoMinRounded, demoMaxRounded
+			var demoMinFloor, demoMaxNew
+			var countyMode = 0
+
+			var stateMasterTopoJson, stateGeoJson, countyMasterTopoJson, countyGeoJson
+			var stateMasterData, countyMasterData
+			var citiesMasterData
+			
+			var demographicById, countyNameById, stateNameById
+			var demographicLabelById
+			var demoByCode = d3.map();
+			var scaletypeByCode = d3.map();
+			var decimalsByCode = d3.map();
+			var unitsByCode = d3.map();
+			var scaledown1ByCode = d3.map();
+			var scaledown2ByCode = d3.map();
+			var theScaletype, theDecimals, theScaledown1, theScaledown2
+			
+			var countyCopiedData = [];
+			
+			var countryNameHeight=50
+			var stateNameHeight=90
+			var countyNameHeight=120
+			var demoNameHeight=155
+			var demoValueHeight=185
+*/
+			var appView = Backbone.View.extend({
+				el:$('#insertForm'),
+				events: {
+					'change #demoInput': 'demoChanged',
+					'click #submit': 'submitClicked'
+				},
+				demoChanged: function(){
+					getDemographic()
+				},
+					
+				submitClicked: function(e){
+					e.preventDefault();
+					countyMode = 0
+					formData = $('#insertForm').serializeArray();
+					stateNumber = stateNumberByName.get(formData[0].value)
+					initMap_CountryStateSplitter(stateNumber)
+				}
+			});
+
+			$(document).ready(readIn);
+//			new appView();
+
+		</script>
+
+	</body>
+</html>

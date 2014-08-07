@@ -1,0 +1,12 @@
+code,demographic,scaletype,decimals,units,scaledown1,scaledown2
+0,,1,,,,
+DP0010001,Population,1,0, ,4,80
+DP0240001,Male/Female Population,3,,,1,1
+DP0020001,Median Age,4,0, ,1,1
+DP0020004,Female - Male Median Age,1,1,years older,1,1
+DP0210004,Home Ownership %,2,,,1,1
+DP0210005,Home Rental %,2,,,1,1
+DP0080025,White Population %,2,,,1,1
+DP0080026,Black Population %,2,,,1,1.5
+DP0080027,Asian Population %,2,,,1,5
+DP0080028,Native American Population %,2,,,1,1
